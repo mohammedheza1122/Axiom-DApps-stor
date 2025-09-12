@@ -1,0 +1,137 @@
+
+// components/Web3AppsGrid.tsx import React from "react"; import { Card, CardContent } from "@/components/ui/card"; import { useTranslation } from "react-i18next";
+
+const Web3AppsGrid = () => { const { t } = useTranslation(); const apps = [ { name: "DApp Explorer", description: t("explore_decentralized_apps") }, { name: "NFT Market", description: t("trade_nfts") }, { name: "DeFi Tracker", description: t("track_defi_assets") }, ];
+
+return ( <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"> {apps.map((app, index) => ( <Card key={index}> <CardContent> <h3 className="text-xl font-semibold">{app.name}</h3> <p className="text-sm text-gray-500">{app.description}</p> </CardContent> </Card> ))} </div> ); };
+
+export default Web3AppsGrid;
+/* Axiom.css */
+
+.axiom-container {
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0f19;
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px #1f1f3a;
+}
+
+.axiom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.axiom-header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: #9a7afc;
+}
+
+.balance {
+  text-align: right;
+}
+
+.balance-amount {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #9a7afc;
+  display: block;
+}
+
+.balance-label {
+  font-size: 0.7rem;
+  color: #6a6a8f;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: #1a1c33;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.web2-links {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.link {
+  padding: 10px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.google {
+  background: #4285f4;
+}
+
+.google:hover {
+  background: #356ac3;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.youtube:hover {
+  background: #cc0000;
+}
+
+.gmail {
+  background: #d93025;
+}
+
+.gmail:hover {
+  background: #a1241a;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #bfbfcf;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 25px;
+  background: #9a7afc;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buttons button:disabled {
+  background: #6a5fad;
+  cursor: default;
+}
+
+.buttons button:hover:not(:disabled) {
+  background: #7e61ef;
+}
+
+
