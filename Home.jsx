@@ -1,10 +1,10 @@
-
 import React, { useState } from 'react';
 import DappCard from '../components/DappCard';
 import Web2Card from '../components/Web2Card';
 import RewardModal from '../components/RewardModal';
 
-const home = () => {
+// 1. اسم المكون يجب أن يبدأ بحرف كبير
+const Home = () => { 
   const [showReward, setShowReward] = useState(true);
 
   return (
@@ -31,4 +31,6 @@ const home = () => {
   );
 };
 
-export default home;
+// 2. قم بتصدير المكون بالاسم الصحيح (الذي يبدأ بحرف كبير)
+export default Home; 
+
