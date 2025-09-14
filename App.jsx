@@ -1,9 +1,12 @@
-
 import React from 'react';
-import Home from './pages/home';
+// 1. استخدم الحرف الكبير في اسم الملف (Home)
+// 2. أضف امتداد الملف (.jsx)
+import Home from './pages/Home.jsx'; 
 
 function App() {
-  return <home />;
+  // 3. استخدم المكون بحرف كبير (PascalCase)
+  return <Home />;
 }
 
 export default App;
+
