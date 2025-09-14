@@ -4,7 +4,7 @@ import DappCard from '../components/DappCard';
 import Web2Card from '../components/Web2Card';
 import RewardModal from '../components/RewardModal';
 
-const Home = () => {
+const home = () => {
   const [showReward, setShowReward] = useState(true);
 
   return (
@@ -31,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default home;
